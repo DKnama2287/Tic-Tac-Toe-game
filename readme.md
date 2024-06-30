@@ -1,7 +1,7 @@
 The Task is to create a simple tic tac toe game using HTML, CSS and JavaScript.
 
 DEPLOYED LINK ->  
-                   https://github.com/DKnama2287/Tic-Tac-Toe-game.git
+                   https://dknama2287.github.io/Tic-Tac-Toe-game/
 
 
 There are 4 subtasks, each of which implements some feature of the game.
