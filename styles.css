@@ -1,0 +1,98 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  background-color : lightpink;
+}
+
+h1 {
+  text-align: center;
+}
+
+#board {
+  margin-left: auto;
+  margin-right: auto;
+  width: 375px;
+  height: 375px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
+}
+
+.cell {
+  width: 120px;
+  height: 120px;
+  border: 1px solid black ;
+  background-color: #1ed0a1;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.cell:hover {
+  background-color: #ffffe0;
+}
+
+#restartButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  width: 150px;
+  background-color: magenta;
+  border: 1px solid #000000;
+  border-radius: 40px;
+  font-size: 18px;
+}
+
+#restartButton:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#msg {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#balloons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.balloon {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 30px;
+  border-radius: 50%;
+  animation: rise 1.5s linear infinite;
+}
+
+.balloon::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 2px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
